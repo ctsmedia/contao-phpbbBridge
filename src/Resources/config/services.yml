@@ -1,6 +1,7 @@
 services:
     phpbb_bridge.connector:
         class: Ctsmedia\Phpbb\BridgeBundle\PhpBB\Connector
+        public: true
         arguments:
             - "@database_connection"
     phpbb_bridge.event_listener.contao_member_listener:
