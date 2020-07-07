@@ -35,7 +35,7 @@ class BypassProxyListener
             // Add the local ip to the trusted proxies ones so we don't get the Server IP as Client IP for incomming bridge requests
             $proxies = $req->getTrustedProxies();
             $proxies[] = $req->server->get('SERVER_ADDR');
-            $req->setTrustedProxies($proxies);
+            $req->setTrustedProxies($proxies, 34359738367);
         }
     }
 }
